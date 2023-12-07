@@ -22,7 +22,7 @@ export default function App() {
     formData.append('file', file);
     formData.append('prompt', prompt);
 
-    axios.post('http://localhost:5000/process-file/', formData)
+    axios.post('https://informextraction.azurewebsites.net/process-file/', formData)
       .then(response => {
         setResponse(response.data);
         setIsLoading(false);
